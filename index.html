@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyễn Quang Đức | Hồ sơ khoa học</title>
+<meta name="description" content="Hồ sơ khoa học của ThS. BS. Nguyễn Quang Đức, Khoa Y tế công cộng, Trường Đại học Y Dược Hải Phòng.">
+<meta property="og:title" content="Nguyễn Quang Đức | Hồ sơ khoa học">
+<meta property="og:description" content="Giảng viên Y tế công cộng, Trường Đại học Y Dược Hải Phòng. Kinh nghiệm, công bố khoa học và dự án.">
+<meta property="og:image" content="photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4e6e'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EQĐ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --text:#1c2430; --muted:#5d6878; --line:#e3e7ed;
+  --accent:#1d4e6e; --accent-2:#2a7f8f; --accent-soft:#e6f0f5; --chip:#eef2f6; --mark:#fff3c4;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 4px 16px rgba(16,24,40,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1419; --surface:#171e26; --text:#e6ebf1; --muted:#9aa6b4; --line:#27313d;
+    --accent:#7fb8d6; --accent-2:#6cc3c9; --accent-soft:#1c2a35; --chip:#202a35; --mark:#4a3f12;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1419; --surface:#171e26; --text:#e6ebf1; --muted:#9aa6b4; --line:#27313d;
+  --accent:#7fb8d6; --accent-2:#6cc3c9; --accent-soft:#1c2a35; --chip:#202a35; --mark:#4a3f12;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:8px;height:56px}
+.topbar nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.topbar nav::-webkit-scrollbar{display:none}
+.topbar nav a{white-space:nowrap;padding:6px 10px;border-radius:8px;color:var(--muted);font-size:14px;font-weight:500}
+.topbar nav a:hover{background:var(--chip);color:var(--text);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:10px;padding:7px 12px;font:inherit;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--accent);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0f1419}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0f1419}}
+.lang{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex-shrink:0}
+.lang button{border:0;background:var(--surface);color:var(--muted);padding:7px 10px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .lang button[aria-pressed="true"]{color:#0f1419}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lang button[aria-pressed="true"]{color:#0f1419}}
+svg.i{width:16px;height:16px;flex-shrink:0}
+
+/* hero */
+.hero{padding:40px 0 8px}
+.hero-card{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.photo{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:center 20%;background:var(--chip);border:4px solid var(--accent-soft)}
+.hero h1{margin:0;font-size:30px;line-height:1.2;letter-spacing:-.01em}
+.hero .degree{margin:6px 0 0;color:var(--accent-2);font-weight:600}
+.hero .pos{margin:4px 0 0;color:var(--muted)}
+.contacts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.contacts a{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:var(--chip);color:var(--text);font-size:14px}
+.contacts a:hover{background:var(--accent-soft);text-decoration:none}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:26px;line-height:1.1;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+
+section{padding:28px 0 4px;scroll-margin-top:64px}
+section h2{font-size:20px;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+section h2::before{content:"";width:4px;height:20px;border-radius:2px;background:var(--accent-2)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}
+.bio{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{padding:4px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:500}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0;padding-top:0}
+.tl li:last-child{padding-bottom:0}
+.tl .when{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums;padding-top:1px}
+.tl .what{font-weight:600}
+.tl .where{color:var(--muted);font-size:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.subh{font-size:15px;margin:0 0 12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+
+/* publications */
+.pub-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"]{color:#0f1419}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{color:#0f1419}}
+.seg button .n{opacity:.75;margin-left:4px;font-size:12px}
+.search{flex:1;min-width:180px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px}
+.search:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+.year-group{margin-top:6px}
+.year{font-weight:700;color:var(--accent);font-size:15px;margin:18px 0 8px}
+.year-group:first-child .year{margin-top:0}
+.pub{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:10px}
+.pub .t{font-weight:600;line-height:1.45}
+.pub .a{color:var(--muted);font-size:14px;margin-top:4px}
+.pub .a b{color:var(--text);font-weight:600}
+.pub .m{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:8px;font-size:14px}
+.pub .j{font-style:italic}
+.tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--chip);color:var(--muted);font-style:normal}
+.tag.main{background:var(--accent-soft);color:var(--accent)}
+.tag.intl{background:color-mix(in srgb,var(--accent-2) 16%,transparent);color:var(--accent-2)}
+.more{display:block;margin:6px auto 0}
+.empty{color:var(--muted);text-align:center;padding:20px}
+
+.proj{padding:12px 0;border-top:1px solid var(--line)}
+.proj:first-child{border-top:0;padding-top:0}
+.proj:last-child{padding-bottom:0}
+.proj .t{font-weight:600}
+.proj .m{color:var(--muted);font-size:14px}
+
+footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
+.status{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:var(--mark);font-size:14px;display:none}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(10,15,20,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal.open{display:flex}
+.modal-box{background:#fff;color:#1c2430;border-radius:20px;padding:24px;text-align:center;max-width:340px;width:100%}
+.modal-box h3{margin:0 0 4px;font-size:18px}
+.modal-box p{margin:0 0 16px;color:#5d6878;font-size:14px}
+#qr{display:flex;justify-content:center}
+#qr img,#qr canvas{width:240px!important;height:240px!important}
+.modal-box .url{word-break:break-all;font-size:13px;color:#5d6878;margin:14px 0}
+.modal-box .row{display:flex;gap:8px;justify-content:center}
+.modal-box .btn{background:#fff;color:#1c2430;border-color:#d5dbe3}
+
+.skeleton{height:14px;border-radius:6px;background:linear-gradient(90deg,var(--chip),var(--line),var(--chip));background-size:200% 100%;animation:sh 1.2s infinite;margin:8px 0}
+@keyframes sh{to{background-position:-200% 0}}
+
+@media (max-width:720px){
+  .hero{padding-top:20px}
+  .hero-card{grid-template-columns:1fr;text-align:center;padding:22px 18px;gap:16px}
+  .photo{margin:0 auto;width:128px;height:128px}
+  .hero h1{font-size:25px}
+  .contacts,.actions{justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid2{grid-template-columns:1fr}
+  .tl li{grid-template-columns:1fr;gap:2px}
+  .card{padding:16px}
+  .topbar .hide-sm{display:none}
+}
+@media print{
+  .topbar,.actions,.pub-tools,.more,.modal,footer .no-print{display:none!important}
+  body{background:#fff}
+  .card,.hero-card,.pub,.stat{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <nav aria-label="Mục lục">
+      <a href="#about" data-i18n="nav_about">Giới thiệu</a>
+      <a href="#experience" data-i18n="nav_exp">Công tác</a>
+      <a href="#education" data-i18n="nav_edu">Học vấn</a>
+      <a href="#publications" data-i18n="nav_pub">Công bố</a>
+      <a href="#projects" data-i18n="nav_proj">Dự án</a>
+      <a href="#awards" data-i18n="nav_awards">Giải thưởng</a>
+    </nav>
+    <button class="btn hide-sm" id="qrBtn2" type="button" aria-label="QR"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>QR</button>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="vi" aria-pressed="true">VI</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="hero-card">
+      <img class="photo" id="photo" src="photo.jpg" alt="">
+      <div>
+        <h1 id="name">Nguyễn Quang Đức</h1>
+        <p class="degree" id="degree"></p>
+        <p class="pos" id="position"></p>
+        <div class="contacts" id="contacts"></div>
+        <div class="actions">
+          <button class="btn primary" id="qrBtn" type="button"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg><span data-i18n="show_qr">Hiện mã QR</span></button>
+          <button class="btn" id="vcardBtn" type="button"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span data-i18n="save_contact">Lưu danh bạ</span></button>
+          <button class="btn" id="shareBtn" type="button"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg><span data-i18n="share">Chia sẻ</span></button>
+          <a class="btn" id="cvBtn" href="#" target="_blank" rel="noopener" hidden><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span data-i18n="cv_pdf">CV (PDF)</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <p class="status" id="status"></p>
+  </div>
+
+  <section id="about">
+    <h2 data-i18n="about">Giới thiệu</h2>
+    <div class="card">
+      <p class="bio" id="bio"><span class="skeleton" style="display:block;width:90%"></span><span class="skeleton" style="display:block;width:70%"></span></p>
+      <div class="chips" id="interests"></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 data-i18n="experience">Quá trình công tác</h2>
+    <div class="card"><ul class="tl" id="expList"></ul></div>
+  </section>
+
+  <section id="education">
+    <h2 data-i18n="education">Học vấn và đào tạo</h2>
+    <div class="grid2">
+      <div class="card"><h3 class="subh" data-i18n="degrees">Bằng cấp</h3><ul class="tl" id="eduList"></ul></div>
+      <div class="card"><h3 class="subh" data-i18n="training">Bồi dưỡng, chứng chỉ</h3><ul class="tl" id="trainList"></ul></div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2 data-i18n="publications">Công bố khoa học</h2>
+    <div class="pub-tools">
+      <div class="seg" id="pubFilter"></div>
+      <input class="search" id="pubSearch" type="search" data-i18n-ph="search_ph" placeholder="Tìm theo tên bài, tạp chí, tác giả">
+    </div>
+    <div id="pubList"><div class="card"><div class="skeleton"></div><div class="skeleton" style="width:60%"></div></div></div>
+  </section>
+
+  <section id="projects">
+    <h2 data-i18n="projects">Đề tài, dự án nghiên cứu</h2>
+    <div class="card" id="projList"></div>
+  </section>
+
+  <section id="awards">
+    <h2 data-i18n="awards">Giải thưởng, khen thưởng</h2>
+    <div class="card"><ul class="tl" id="awardList"></ul></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div id="updated"></div>
+  <div class="no-print" style="margin-top:6px">© <span id="yr"></span> <span id="footName">Nguyễn Quang Đức</span></div>
+</footer>
+
+<div class="modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+  <div class="modal-box">
+    <h3 id="qrTitle">Nguyễn Quang Đức</h3>
+    <p data-i18n="qr_hint">Quét mã để mở hồ sơ này</p>
+    <div id="qr"></div>
+    <div class="url" id="qrUrl"></div>
+    <div class="row">
+      <button class="btn" type="button" id="copyBtn" data-i18n="copy">Sao chép link</button>
+      <button class="btn" type="button" id="closeQr" data-i18n="close">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ===== Cấu hình ===== */
+const SHEET_ID = "1WwVMtzRK6ld13qsZWqBNlwAQ9LZ-xrz9Fr5SqDa6WdE";
+const TABS = { info:"Thông tin", edu:"Học vấn", exp:"Công tác", train:"Đào tạo khác", pubs:"Bài báo", proj:"Đề tài - Dự án", awards:"Giải thưởng" };
+/* Các cách viết tên của bạn trong danh sách tác giả, để in đậm */
+const MY_NAMES = ["Nguyễn Quang Đức","Nguyen Quang Duc","Quang Duc Nguyen","Duc Quang Nguyen","Duc Nguyen Quang","Quang D. Nguyen","Nguyen QuangDuc"];
+
+const T = {
+  vi:{nav_about:"Giới thiệu",nav_exp:"Công tác",nav_edu:"Học vấn",nav_pub:"Công bố",nav_proj:"Dự án",nav_awards:"Giải thưởng",
+      show_qr:"Hiện mã QR",save_contact:"Lưu danh bạ",share:"Chia sẻ",cv_pdf:"CV (PDF)",about:"Giới thiệu",experience:"Quá trình công tác",
+      education:"Học vấn và đào tạo",degrees:"Bằng cấp",training:"Bồi dưỡng, chứng chỉ",publications:"Công bố khoa học",projects:"Đề tài, dự án nghiên cứu",
+      awards:"Giải thưởng, khen thưởng",search_ph:"Tìm theo tên bài, tạp chí, tác giả",qr_hint:"Quét mã để mở hồ sơ này",copy:"Sao chép link",copied:"Đã sao chép",close:"Đóng",
+      all:"Tất cả",intl:"Quốc tế",dom:"Trong nước",book:"Sách, giáo trình",main:"Tác giả chính",co:"Đồng tác giả",editor:"Đồng biên soạn",
+      st_intl:"Bài báo quốc tế",st_dom:"Bài báo trong nước",st_book:"Giáo trình",st_proj:"Dự án nghiên cứu",
+      show_more:"Xem thêm {n} công bố",no_result:"Không có công bố phù hợp.",now:"nay",updated:"Dữ liệu cập nhật trực tiếp từ hồ sơ của tác giả.",
+      load_err:"Chưa đọc được dữ liệu mới nhất. Đang hiển thị bản lưu sẵn.",load_fail:"Chưa đọc được dữ liệu. Hãy kiểm tra Google Sheet đã bật chia sẻ \"Bất kỳ ai có đường liên kết\".",
+      code:"Mã số",funder:"Tài trợ"},
+  en:{nav_about:"About",nav_exp:"Experience",nav_edu:"Education",nav_pub:"Publications",nav_proj:"Projects",nav_awards:"Awards",
+      show_qr:"Show QR code",save_contact:"Save contact",share:"Share",cv_pdf:"CV (PDF)",about:"About",experience:"Professional experience",
+      education:"Education and training",degrees:"Degrees",training:"Certificates and training",publications:"Publications",projects:"Research projects",
+      awards:"Awards and honours",search_ph:"Search title, journal or author",qr_hint:"Scan to open this profile",copy:"Copy link",copied:"Copied",close:"Close",
+      all:"All",intl:"International",dom:"Vietnamese journals",book:"Books, textbooks",main:"First/lead author",co:"Co-author",editor:"Co-editor",
+      st_intl:"International articles",st_dom:"Vietnamese articles",st_book:"Textbooks",st_proj:"Research projects",
+      show_more:"Show {n} more",no_result:"No matching publications.",now:"present",updated:"Content is updated live from the author's records.",
+      load_err:"Could not load the latest data. Showing a saved copy.",load_fail:"Could not load data. Check that the Google Sheet is shared with \"Anyone with the link\".",
+      code:"Code",funder:"Funding"}
+};
+
+let LANG = "vi";
+try{ const s = localStorage.getItem("cv_lang"); if(s==="vi"||s==="en") LANG = s; else if(!/^vi/i.test(navigator.language||"vi")) LANG="en"; }catch(e){}
+const urlLang = new URLSearchParams(location.search).get("lang"); if(urlLang==="en"||urlLang==="vi") LANG = urlLang;
+
+let DATA = null, pubFilter = "all", pubQuery = "", pubLimit = 12;
+const $ = s => document.querySelector(s);
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const t = k => (T[LANG][k] ?? k);
+
+/* ===== CSV ===== */
+function parseCSV(text){
+  const rows=[]; let row=[], f="", q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){ if(c==='"'){ if(text[i+1]==='"'){f+='"';i++;} else q=false; } else f+=c; }
+    else if(c==='"') q=true;
+    else if(c===','){ row.push(f); f=""; }
+    else if(c==='\n'||c==='\r'){ if(c==='\r'&&text[i+1]==='\n') i++; row.push(f); rows.push(row); row=[]; f=""; }
+    else f+=c;
+  }
+  if(f!==""||row.length){ row.push(f); rows.push(row); }
+  return rows;
+}
+function toObjects(rows){
+  if(!rows.length) return [];
+  const h = rows[0].map(x=>x.trim());
+  return rows.slice(1).filter(r=>r.some(v=>v.trim()!=="")).map(r=>{ const o={}; h.forEach((k,i)=>o[k]=(r[i]||"").trim()); return o; });
+}
+async function loadTab(name){
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&headers=1&sheet=${encodeURIComponent(name)}&_=${Date.now()}`;
+  const r = await fetch(url,{cache:"no-store"});
+  if(!r.ok) throw new Error(r.status);
+  const txt = await r.text();
+  if(/^\s*<!DOCTYPE|<html/i.test(txt)) throw new Error("not shared");
+  return toObjects(parseCSV(txt));
+}
+async function loadAll(){
+  const keys = Object.keys(TABS);
+  const res = await Promise.all(keys.map(k=>loadTab(TABS[k])));
+  const d = {}; keys.forEach((k,i)=>d[k]=res[i]); return d;
+}
+
+/* ===== Helpers ===== */
+const bi = (o,base) => LANG==="en" ? (o[base+" (EN)"]||o[base+" (VI)"]||"") : (o[base+" (VI)"]||"");
+function info(key){ const r=(DATA.info||[]).find(x=>(x["Khóa (không sửa)"]||Object.values(x)[0])===key); if(!r) return ""; const vals=Object.values(r); const vi=vals[2]||"", en=vals[3]||""; return LANG==="en"?(en||vi):vi; }
+function infoVI(key){ const r=(DATA.info||[]).find(x=>Object.values(x)[0]===key); return r?(Object.values(r)[2]||""):""; }
+const period = s => esc(s).replace(/\bnay\b/i, t("now"));
+function highlightMe(authors){
+  let s = esc(authors);
+  MY_NAMES.forEach(n=>{ const re=new RegExp(esc(n).replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"g"); s=s.replace(re,"<b>$&</b>"); });
+  return s;
+}
+const icons = {
+  mail:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
+  phone:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+  link:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>',
+  pin:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+};
+const catOf = p => { const c=(p["Loại"]||"").toLowerCase(); return c.startsWith("quốc")?"intl":c.startsWith("sách")?"book":"dom"; };
+const roleKey = r => { r=(r||"").toLowerCase(); return r.includes("chính")?"main":r.includes("biên")?"editor":"co"; };
+
+/* ===== Render ===== */
+function render(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>el.placeholder=t(el.dataset.i18nPh));
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===LANG)));
+  if(!DATA) return;
+
+  const name = info("name");
+  $("#name").textContent = name; $("#qrTitle").textContent = name; $("#footName").textContent = name;
+  document.title = name + (LANG==="en"?" | Academic profile":" | Hồ sơ khoa học");
+  $("#degree").textContent = info("degree");
+  $("#position").textContent = [info("position"), info("organization")].filter(Boolean).join(" · ");
+  const ph = infoVI("photo"); if(ph) $("#photo").src = ph; $("#photo").alt = name;
+  $("#bio").textContent = info("bio");
+  $("#interests").innerHTML = info("interests").split(";").map(s=>s.trim()).filter(Boolean).map(s=>`<span class="chip">${esc(s)}</span>`).join("");
+
+  const c=[], email=infoVI("email"), phone=infoVI("phone"), orcid=infoVI("orcid");
+  if(email) c.push(`<a href="mailto:${esc(email)}">${icons.mail}${esc(email)}</a>`);
+  if(phone) c.push(`<a href="tel:${esc(phone.replace(/[^\d+]/g,""))}">${icons.phone}${esc(phone)}</a>`);
+  if(orcid) c.push(`<a href="https://orcid.org/${esc(orcid)}" target="_blank" rel="noopener">${icons.link}ORCID</a>`);
+  [["researchgate","ResearchGate"],["scopus","Scopus"],["scholar","Google Scholar"]].forEach(([k,l])=>{ const u=infoVI(k); if(u) c.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${icons.link}${l}</a>`); });
+  const addr = info("address"); if(addr) c.push(`<a href="https://www.google.com/maps/search/${encodeURIComponent(addr)}" target="_blank" rel="noopener">${icons.pin}${esc(LANG==="en"?"Hai Phong, Vietnam":"Hải Phòng")}</a>`);
+  $("#contacts").innerHTML = c.join("");
+  const cv = infoVI("cv_pdf"); $("#cvBtn").hidden = !cv; if(cv) $("#cvBtn").href = cv;
+
+  const pubs = (DATA.pubs||[]).filter(p=>(p["Hiển thị"]||"Có").toLowerCase()!=="không" && p["Tiêu đề"]);
+  const cnt = {intl:0,dom:0,book:0}; pubs.forEach(p=>cnt[catOf(p)]++);
+  $("#stats").innerHTML = [[cnt.intl,"st_intl"],[cnt.dom,"st_dom"],[cnt.book,"st_book"],[(DATA.proj||[]).length,"st_proj"]]
+    .map(([n,k])=>`<div class="stat"><b>${n}</b><span>${t(k)}</span></div>`).join("");
+
+  $("#expList").innerHTML = (DATA.exp||[]).map(e=>`<li><div class="when">${period(e["Thời gian"])}</div><div><div class="what">${esc(bi(e,"Vị trí"))}</div><div class="where">${esc(bi(e,"Đơn vị"))}</div></div></li>`).join("");
+  $("#eduList").innerHTML = (DATA.edu||[]).map(e=>`<li><div class="when">${esc(e["Năm tốt nghiệp"])}</div><div><div class="what">${esc(bi(e,"Bậc"))}, ${esc(bi(e,"Chuyên ngành"))}</div><div class="where">${esc(bi(e,"Nơi đào tạo"))}</div></div></li>`).join("");
+  $("#trainList").innerHTML = (DATA.train||[]).map(e=>`<li><div class="when">${period(e["Thời gian"])}</div><div><div class="what">${esc(bi(e,"Tên khóa"))}</div><div class="where">${esc(bi(e,"Nơi đào tạo"))}</div></div></li>`).join("");
+  $("#projList").innerHTML = (DATA.proj||[]).map(p=>{
+    const title = p["Link"]?`<a href="${esc(p["Link"])}" target="_blank" rel="noopener">${esc(p["Tên đề tài/dự án"])}</a>`:esc(p["Tên đề tài/dự án"]);
+    const meta=[bi(p,"Vai trò"), p["Mã số"]?`${t("code")}: ${p["Mã số"]}`:"", p["Tài trợ / Quản lý"]?`${t("funder")}: ${p["Tài trợ / Quản lý"]}`:""].filter(Boolean).map(esc).join(" · ");
+    return `<div class="proj"><div class="t">${title} <span class="tag">${esc(bi(p,"Tình trạng"))}</span></div><div class="m">${meta}</div></div>`;
+  }).join("");
+  $("#awardList").innerHTML = (DATA.awards||[]).map(a=>`<li><div class="when">${esc(a["Năm"])}</div><div><div class="what">${esc(bi(a,"Tên giải thưởng"))}</div><div class="where">${esc(bi(a,"Hình thức / Cấp"))}</div></div></li>`).join("");
+  ["projects","awards"].forEach(id=>{ const has = id==="projects"?(DATA.proj||[]).length:(DATA.awards||[]).length; document.getElementById(id).hidden=!has; });
+
+  $("#pubFilter").innerHTML = [["all",pubs.length],["intl",cnt.intl],["dom",cnt.dom],["book",cnt.book]].filter(([k,n])=>k==="all"||n)
+    .map(([k,n])=>`<button type="button" data-f="${k}" aria-pressed="${k===pubFilter}">${t(k)}<span class="n">${n}</span></button>`).join("");
+  renderPubs(pubs);
+  $("#updated").textContent = t("updated");
+}
+
+function renderPubs(all){
+  all = all || (DATA.pubs||[]).filter(p=>(p["Hiển thị"]||"Có").toLowerCase()!=="không" && p["Tiêu đề"]);
+  const q = pubQuery.toLowerCase();
+  let list = all.filter(p=>(pubFilter==="all"||catOf(p)===pubFilter) && (!q || [p["Tiêu đề"],p["Tác giả"],p["Tạp chí / Nhà xuất bản"]].join(" ").toLowerCase().includes(q)));
+  list.sort((a,b)=>(+b["Năm"]||0)-(+a["Năm"]||0) || (catOf(a)==="intl"?-1:0)-(catOf(b)==="intl"?-1:0));
+  if(!list.length){ $("#pubList").innerHTML = `<div class="card empty">${t("no_result")}</div>`; return; }
+  const shown = (q||pubFilter!=="all") ? list : list.slice(0,pubLimit);
+  const groups = {}; shown.forEach(p=>{ (groups[p["Năm"]||"—"] ||= []).push(p); });
+  let html = Object.keys(groups).sort((a,b)=>(+b||0)-(+a||0)).map(y=>`<div class="year-group"><div class="year">${esc(y)}</div>${groups[y].map(pubHTML).join("")}</div>`).join("");
+  if(shown.length<list.length) html += `<button class="btn more" id="moreBtn" type="button">${t("show_more").replace("{n}",list.length-shown.length)}</button>`;
+  $("#pubList").innerHTML = html;
+  const mb=$("#moreBtn"); if(mb) mb.onclick=()=>{ pubLimit=1e9; renderPubs(); };
+}
+function pubHTML(p){
+  const cat = catOf(p), rk = roleKey(p["Vai trò"]), doi = (p["DOI"]||"").replace(/^https?:\/\/(dx\.)?doi\.org\//i,"");
+  const title = doi?`<a href="https://doi.org/${esc(doi)}" target="_blank" rel="noopener">${esc(p["Tiêu đề"])}</a>`:esc(p["Tiêu đề"]);
+  const meta = [`<span class="j">${esc(p["Tạp chí / Nhà xuất bản"])}</span>`];
+  if(p["Tập (số): trang"]) meta.push(`<span>${esc(p["Tập (số): trang"])}</span>`);
+  if(doi) meta.push(`<a href="https://doi.org/${esc(doi)}" target="_blank" rel="noopener">DOI: ${esc(doi)}</a>`);
+  meta.push(`<span class="tag ${cat==="intl"?"intl":""}">${t(cat)}</span>`);
+  meta.push(`<span class="tag ${rk==="main"?"main":""}">${t(rk)}</span>`);
+  return `<article class="pub"><div class="t">${title}</div>${p["Tác giả"]?`<div class="a">${highlightMe(p["Tác giả"])}</div>`:""}<div class="m">${meta.join("")}</div></article>`;
+}
+
+/* ===== Events ===== */
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{ LANG=b.dataset.lang; try{localStorage.setItem("cv_lang",LANG)}catch(e){} render(); });
+$("#pubFilter").addEventListener("click",e=>{ const b=e.target.closest("button[data-f]"); if(!b) return; pubFilter=b.dataset.f; document.querySelectorAll("#pubFilter button").forEach(x=>x.setAttribute("aria-pressed",String(x===b))); renderPubs(); });
+$("#pubSearch").addEventListener("input",e=>{ pubQuery=e.target.value.trim(); renderPubs(); });
+
+const pageUrl = () => location.href.split("#")[0].split("?")[0];
+let qrMade=false;
+function openQR(){
+  $("#qrModal").classList.add("open"); $("#qrUrl").textContent = pageUrl();
+  if(!qrMade && window.QRCode){ new QRCode($("#qr"),{text:pageUrl(),width:480,height:480,correctLevel:QRCode.CorrectLevel.M}); qrMade=true; }
+}
+$("#qrBtn").onclick=openQR; $("#qrBtn2").onclick=openQR;
+$("#closeQr").onclick=()=>$("#qrModal").classList.remove("open");
+$("#qrModal").addEventListener("click",e=>{ if(e.target.id==="qrModal") e.currentTarget.classList.remove("open"); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") $("#qrModal").classList.remove("open"); });
+$("#copyBtn").onclick=async()=>{ try{ await navigator.clipboard.writeText(pageUrl()); $("#copyBtn").textContent=t("copied"); setTimeout(()=>$("#copyBtn").textContent=t("copy"),1500);}catch(e){} };
+$("#shareBtn").onclick=async()=>{ if(navigator.share){ try{ await navigator.share({title:document.title,url:pageUrl()}); }catch(e){} } else openQR(); };
+$("#vcardBtn").onclick=()=>{
+  if(!DATA) return;
+  const saved=LANG; LANG="vi"; const n=info("name"), org=info("organization"), pos=info("position"), em=infoVI("email"), tel=infoVI("phone"); LANG=saved;
+  const parts=n.split(" "), last=parts[0], first=parts.slice(1).join(" ");
+  const v=["BEGIN:VCARD","VERSION:3.0",`N:${last};${first};;;`,`FN:${n}`,org&&`ORG:${org}`,pos&&`TITLE:${pos}`,em&&`EMAIL;TYPE=WORK:${em}`,tel&&`TEL;TYPE=CELL:${tel}`,`URL:${pageUrl()}`,"END:VCARD"].filter(Boolean).join("\r\n");
+  const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([v],{type:"text/vcard"})); a.download="nguyen-quang-duc.vcf"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+};
+$("#yr").textContent = new Date().getFullYear();
+
+/* ===== Start ===== */
+render();
+(async()=>{
+  try{
+    DATA = await loadAll();
+    try{ localStorage.setItem("cv_cache", JSON.stringify(DATA)); }catch(e){}
+  }catch(err){
+    let cached=null; try{ cached=JSON.parse(localStorage.getItem("cv_cache")||"null"); }catch(e){}
+    if(!cached){ try{ const r=await fetch("data-backup.json"); if(r.ok){ const raw=await r.json(); cached={}; Object.keys(raw).forEach(k=>cached[k]=typeof raw[k]==="string"?toObjects(parseCSV(raw[k])):raw[k]); } }catch(e){} }
+    const st=$("#status"); st.style.display="block";
+    if(cached){ DATA=cached; st.textContent=t("load_err"); } else { st.textContent=t("load_fail"); return; }
+  }
+  render();
+})();
+</script>
+</body>
+</html>
