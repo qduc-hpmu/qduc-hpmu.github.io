@@ -124,6 +124,21 @@ section h2::before{content:"";width:4px;height:20px;border-radius:2px;background
 .proj .t{font-weight:600}
 .proj .m{color:var(--muted);font-size:14px}
 
+/* skills */
+.skill{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.skill:first-child{border-top:0;padding-top:0}
+.skill:last-child{padding-bottom:0}
+.skill .g{font-weight:600}
+.skill .chips{margin-top:0}
+
+/* products */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.prod{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.prod .top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.prod .t{font-weight:600;font-size:16px;line-height:1.4}
+.prod .d{color:var(--muted);font-size:14px;flex:1}
+.prod .btn{align-self:flex-start;margin-top:6px}
+
 footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
 .status{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:var(--mark);font-size:14px;display:none}
 
@@ -151,6 +166,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
   .stats{grid-template-columns:repeat(2,1fr)}
   .grid2{grid-template-columns:1fr}
   .tl li{grid-template-columns:1fr;gap:2px}
+  .skill{grid-template-columns:1fr;gap:8px}
   .card{padding:16px}
   .topbar .hide-sm{display:none}
 }
@@ -169,8 +185,10 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
       <a href="#about" data-i18n="nav_about">Giới thiệu</a>
       <a href="#experience" data-i18n="nav_exp">Công tác</a>
       <a href="#education" data-i18n="nav_edu">Học vấn</a>
+      <a href="#skills" data-i18n="nav_skills">Kỹ năng</a>
       <a href="#publications" data-i18n="nav_pub">Công bố</a>
       <a href="#projects" data-i18n="nav_proj">Dự án</a>
+      <a href="#products" data-i18n="nav_prod">Sản phẩm</a>
       <a href="#awards" data-i18n="nav_awards">Giải thưởng</a>
     </nav>
     <button class="btn hide-sm" id="qrBtn2" type="button" aria-label="QR"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>QR</button>
@@ -223,6 +241,11 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
     </div>
   </section>
 
+  <section id="skills" hidden>
+    <h2 data-i18n="skills">Kỹ năng</h2>
+    <div class="card" id="skillList"></div>
+  </section>
+
   <section id="publications">
     <h2 data-i18n="publications">Công bố khoa học</h2>
     <div class="pub-tools">
@@ -235,6 +258,11 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
   <section id="projects">
     <h2 data-i18n="projects">Đề tài, dự án nghiên cứu</h2>
     <div class="card" id="projList"></div>
+  </section>
+
+  <section id="products" hidden>
+    <h2 data-i18n="products">Sản phẩm</h2>
+    <div class="prod-grid" id="prodList"></div>
   </section>
 
   <section id="awards">
@@ -265,7 +293,9 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:13px;text-align:center}
 <script>
 /* ===== Cấu hình ===== */
 const SHEET_ID = "1WwVMtzRK6ld13qsZWqBNlwAQ9LZ-xrz9Fr5SqDa6WdE";
-const TABS = { info:"Thông tin", edu:"Học vấn", exp:"Công tác", train:"Đào tạo khác", pubs:"Bài báo", proj:"Đề tài - Dự án", awards:"Giải thưởng" };
+const TABS = { info:"Thông tin", edu:"Học vấn", exp:"Công tác", train:"Đào tạo khác", pubs:"Bài báo", proj:"Đề tài - Dự án", awards:"Giải thưởng", skills:"Kỹ năng", prods:"Sản phẩm" };
+/* Tab thêm sau: nếu chưa có trong Sheet thì trang vẫn chạy, chỉ ẩn mục đó */
+const OPTIONAL_TABS = ["skills","prods"];
 /* Các cách viết tên của bạn trong danh sách tác giả, để in đậm */
 const MY_NAMES = ["Nguyễn Quang Đức","Nguyen Quang Duc","Quang Duc Nguyen","Duc Quang Nguyen","Duc Nguyen Quang","Quang D. Nguyen","Nguyen QuangDuc"];
 
@@ -278,7 +308,7 @@ const T = {
       st_intl:"Bài báo quốc tế",st_dom:"Bài báo trong nước",st_book:"Giáo trình",st_proj:"Dự án nghiên cứu",
       show_more:"Xem thêm {n} công bố",no_result:"Không có công bố phù hợp.",now:"nay",updated:"Dữ liệu cập nhật trực tiếp từ hồ sơ của tác giả.",
       load_err:"Chưa đọc được dữ liệu mới nhất. Đang hiển thị bản lưu sẵn.",load_fail:"Chưa đọc được dữ liệu. Hãy kiểm tra Google Sheet đã bật chia sẻ \"Bất kỳ ai có đường liên kết\".",
-      code:"Mã số",funder:"Tài trợ"},
+      code:"Mã số",funder:"Tài trợ",nav_skills:"Kỹ năng",nav_prod:"Sản phẩm",skills:"Kỹ năng",products:"Sản phẩm",open:"Mở sản phẩm"},
   en:{nav_about:"About",nav_exp:"Experience",nav_edu:"Education",nav_pub:"Publications",nav_proj:"Projects",nav_awards:"Awards",
       show_qr:"Show QR code",save_contact:"Save contact",share:"Share",cv_pdf:"CV (PDF)",about:"About",experience:"Professional experience",
       education:"Education and training",degrees:"Degrees",training:"Certificates and training",publications:"Publications",projects:"Research projects",
@@ -287,7 +317,7 @@ const T = {
       st_intl:"International articles",st_dom:"Vietnamese articles",st_book:"Textbooks",st_proj:"Research projects",
       show_more:"Show {n} more",no_result:"No matching publications.",now:"present",updated:"Content is updated live from the author's records.",
       load_err:"Could not load the latest data. Showing a saved copy.",load_fail:"Could not load data. Check that the Google Sheet is shared with \"Anyone with the link\".",
-      code:"Code",funder:"Funding"}
+      code:"Code",funder:"Funding",nav_skills:"Skills",nav_prod:"Products",skills:"Skills",products:"Products",open:"Open"}
 };
 
 let LANG = "vi";
@@ -328,7 +358,7 @@ async function loadTab(name){
 }
 async function loadAll(){
   const keys = Object.keys(TABS);
-  const res = await Promise.all(keys.map(k=>loadTab(TABS[k])));
+  const res = await Promise.all(keys.map(k=>OPTIONAL_TABS.includes(k)?loadTab(TABS[k]).catch(()=>[]):loadTab(TABS[k])));
   const d = {}; keys.forEach((k,i)=>d[k]=res[i]); return d;
 }
 
@@ -391,6 +421,19 @@ function render(){
     return `<div class="proj"><div class="t">${title} <span class="tag">${esc(bi(p,"Tình trạng"))}</span></div><div class="m">${meta}</div></div>`;
   }).join("");
   $("#awardList").innerHTML = (DATA.awards||[]).map(a=>`<li><div class="when">${esc(a["Năm"])}</div><div><div class="what">${esc(bi(a,"Tên giải thưởng"))}</div><div class="where">${esc(bi(a,"Hình thức / Cấp"))}</div></div></li>`).join("");
+  const visible = rows => (rows||[]).filter(r=>(r["Hiển thị"]||"Có").toLowerCase()!=="không");
+  const skills = visible(DATA.skills).filter(s=>bi(s,"Kỹ năng"));
+  $("#skillList").innerHTML = skills.map(s=>`<div class="skill"><div class="g">${esc(bi(s,"Nhóm kỹ năng"))}</div><div class="chips">${bi(s,"Kỹ năng").split(";").map(x=>x.trim()).filter(Boolean).map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("");
+  $("#skills").hidden = !skills.length;
+  const safeUrl = u => /^https?:\/\//i.test(u||"") ? u : "";
+  const prods = visible(DATA.prods).filter(p=>bi(p,"Tên sản phẩm"));
+  prods.sort((a,b)=>(+b["Năm"]||0)-(+a["Năm"]||0));
+  $("#prodList").innerHTML = prods.map(p=>{
+    const u = safeUrl(p["Link"]), name = esc(bi(p,"Tên sản phẩm"));
+    const top = [bi(p,"Loại")?`<span class="tag">${esc(bi(p,"Loại"))}</span>`:"", p["Năm"]?`<span>${esc(p["Năm"])}</span>`:""].join("");
+    return `<article class="prod">${top.trim()?`<div class="top">${top}</div>`:""}<div class="t">${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${name}</a>`:name}</div>${bi(p,"Mô tả ngắn")?`<div class="d">${esc(bi(p,"Mô tả ngắn"))}</div>`:""}${u?`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">${icons.link}${t("open")}</a>`:""}</article>`;
+  }).join("");
+  $("#products").hidden = !prods.length;
   ["projects","awards"].forEach(id=>{ const has = id==="projects"?(DATA.proj||[]).length:(DATA.awards||[]).length; document.getElementById(id).hidden=!has; });
 
   $("#pubFilter").innerHTML = [["all",pubs.length],["intl",cnt.intl],["dom",cnt.dom],["book",cnt.book]].filter(([k,n])=>k==="all"||n)
